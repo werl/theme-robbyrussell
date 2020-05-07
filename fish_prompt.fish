@@ -23,12 +23,13 @@ function fish_prompt
   set -l red (set_color -o red)
   set -l blue (set_color -o blue)
   set -l green (set_color -o green)
+  set -l orange (set_color -o orange)
   set -l normal (set_color normal)
 
   if test $last_status = 0
-      set arrow "$green$USER@(hostname|cut -d . -f 1) ➜ "
+      set arrow "$orange$USER@" (hostname|cut -d . -f 1) " $green➜ "
   else
-      set arrow "$red$USER@(hostname|cut -d . -f 1) ➜ "
+      set arrow "$orange$USER@" (hostname|cut -d . -f 1) " $red➜ "
   end
   set -l cwd $cyan(basename (prompt_pwd))
 
