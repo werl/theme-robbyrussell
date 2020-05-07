@@ -23,7 +23,7 @@ function fish_prompt
   set -l red (set_color -o red)
   set -l blue (set_color -o blue)
   set -l green (set_color -o green)
-  set -l orange (set_color -o -i f60 yellow)
+  set -l orange (set_color -o f60 yellow)
   set -l normal (set_color normal)
 
   if test $last_status = 0
